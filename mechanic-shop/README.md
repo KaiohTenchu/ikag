@@ -1,10 +1,10 @@
-# Mechanic's Shop React App
+# IKAG Auto Solutions
 
-This project was bootstrapped with [Vite](https://vitejs.dev/) and provides a simple starting point for a mechanic's shop application.
+This React project was bootstrapped with [Vite](https://vitejs.dev/). It displays a welcome screen and provides options to sign up for the newsletter, submit a service ticket, or create an account with vehicle details.
 
-## Available Scripts
-
+## Scripts
 - `npm install` – install dependencies
 - `npm run dev` – start the development server
+- `npm run build` – build for production
 
-The design uses a black and gold color scheme defined in `src/index.css` and `src/App.css`.
+The color theme is black and gold and styles are defined in `src/index.css` and `src/App.css`.

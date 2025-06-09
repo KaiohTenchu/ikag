@@ -1,5 +1,11 @@
-# Mechanic's Shop Project
+# IKAG Auto Solutions React App
 
-This repository contains a simple React application for a mechanic's shop located in `mechanic-shop/`.
+This repository contains a React application located in `mechanic-shop/`. The app features a black and gold theme and provides forms for newsletter signup, ticket submission, and account creation.
 
-Run `npm install` and `npm run dev` inside that directory to start the development server.
+To run the project:
+
+```bash
+cd mechanic-shop
+npm install
+npm run dev
+```

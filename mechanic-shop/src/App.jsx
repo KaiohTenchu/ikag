@@ -1,27 +1,35 @@
+import { useState } from 'react'
 import './App.css'
+import LoadingScreen from './components/LoadingScreen.jsx'
+import Home from './components/Home.jsx'
+import NewsletterForm from './components/NewsletterForm.jsx'
+import TicketForm from './components/TicketForm.jsx'
+import AccountForm from './components/AccountForm.jsx'
 
 function App() {
-  return (
-    <div className="app">
-      <header className="header">
-        <h1>Mechanic's Shop</h1>
-      </header>
-      <main>
-        <section className="services">
-          <h2>Our Services</h2>
-          <ul>
-            <li>Oil Change</li>
-            <li>Tire Rotation</li>
-            <li>Brake Inspection</li>
-            <li>Engine Diagnostics</li>
-          </ul>
-        </section>
-      </main>
-      <footer className="footer">
-        <p>&copy; 2024 Mechanic's Shop</p>
-      </footer>
-    </div>
-  )
+  const [page, setPage] = useState('loading')
+
+  if (page === 'loading') {
+    return <LoadingScreen onFinish={() => setPage('home')} />
+  }
+
+  if (page === 'home') {
+    return <Home onSelect={setPage} />
+  }
+
+  if (page === 'newsletter') {
+    return <NewsletterForm onBack={() => setPage('home')} />
+  }
+
+  if (page === 'ticket') {
+    return <TicketForm onBack={() => setPage('home')} />
+  }
+
+  if (page === 'account') {
+    return <AccountForm onBack={() => setPage('home')} />
+  }
+
+  return null
 }
 
 export default App

@@ -56,3 +56,8 @@ button:focus,
 button:focus-visible {
   outline: 4px auto #FFD700;
 }
+
+label {
+  display: flex;
+  flex-direction: column;
+}
